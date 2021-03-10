@@ -1,0 +1,32 @@
+{
+  "name": "dysrt",
+  "version": "1.0.0",
+  "description": "剪映导出字幕转srt",
+  "main": "src/index.js",
+  "bin": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "subtitle",
+    "jianying",
+    "srt",
+    "剪辑",
+    "剪映",
+    "字幕"
+  ],
+  "author": "guider@yeah.net",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^7.1.0",
+    "configstore": "^4.0.0",
+    "fs-extra": "^8.0.1",
+    "got": "^9.6.0",
+    "inquirer": "^6.3.1",
+    "klaw": "^3.0.0",
+    "safe-eval": "^0.4.1",
+    "shelljs": "^0.8.4",
+    "signale": "^1.4.0",
+    "srt2fcpxml": "^1.0.9"
+  }
+}
