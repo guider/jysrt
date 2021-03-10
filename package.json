@@ -1,5 +1,5 @@
 {
-  "name": "dysrt",
+  "name": "jysrt",
   "version": "1.0.0",
   "description": "剪映导出字幕转srt",
   "main": "src/index.js",
