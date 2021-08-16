@@ -79,9 +79,9 @@ function convertJson2Srt (file) {
   textTracks.forEach((e, i) => {
     //生成字幕文件内容
     data += (i) + '\n' +
-      formatTime(e.target_timerange.start / 1000) + ' --> ' +
+      formatTime(e.target_timerange.start / 1000/1000) + ' --> ' +
       formatTime(
-        (e.target_timerange.start + e.target_timerange.duration) / 1000) +
+        (e.target_timerange.start + e.target_timerange.duration) / 1000/1000) +
       '\n' +
       (originData.materials.texts.find(x => x.id == e.material_id).content) +
       '\n\n'
