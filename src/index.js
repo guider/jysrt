@@ -28,14 +28,17 @@ let filePath = process.argv[2]
 if (fs.lstatSync(filePath).isFile()) {
   convertJson2Srt(filePath)
 }else if (fs.lstatSync(filePath).isDirectory()){
-  convertJson2Srt(filePath+'/template.json')
+  convertJson2Srt(filePath+'/template.tmp')
 }
 
 function convertJson2Srt (file) {
   // let originData = JSON.parse(fs.readFileSync(file))
   let originData = fs.readJSONSync(file)
+  console.log(originData)
   let textTracks = (originData.tracks).filter(v => {
-    return v.subType == 'sub_sticker_text' && v.type == 'sticker'
+    console.log(v)
+    return v.type=='text'
+    // return v.sub_type == 'sub_sticker_text' && v.type == 'sticker'
   })
 
   textTracks = textTracks.flatMap(x => {
